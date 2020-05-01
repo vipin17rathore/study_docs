@@ -1,0 +1,126 @@
+-----------Java------------
+
+1. OOPS
+   1 Inheritance
+   2 Pollymorphism
+   3 Encapsulation
+   4 Abstraction
+   5 Object
+   6 Class
+   
+Apart from that
+   7 Association
+   8 composition
+   9 aggregation
+   
+   
+2 Simula is the 1st object oriented prog language.\
+
+3 Smalltalk is 1st truly object oriented prog language.
+
+4 Object :- Any entity that has state and behavior is known as an object. For example, a chair, pen, table, keyboard, bike, etc. 
+			It can be physical or logical.
+
+5 Class :- Collection of objects is called class. It is a logical entity.
+		   A class can also be defined as a blueprint from which you can create an individual object. Class doesn't consume any space.		
+
+6 Inheritance :- When one object acquires all the properties and behaviors of a parent object, it is known as inheritance. It provides code reusability. 
+				 It is used to achieve runtime polymorphism.		   
+
+7 Polymorphism:- in Java is a concept by which we can perform a single action in different ways. ... 
+				 So polymorphism means many form
+    1 Overloading
+	2 Overriding : We can nt achieved for data member
+	
+8 Abstraction : Hiding internal details and showing functionality is known as abstraction. For example phone call, we don't know the internal processing.
+				In Java, we use abstract class and interface to achieve abstraction
+				
+9 Encapsulation : Binding (or wrapping) code and data together into a single unit are known as encapsulation. 
+                  For example, a capsule, it is wrapped with different medicines.
+                  A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+				  
+10 Association : Represents the relationship between the objects. Here, one object can be associated with one object or many objects. 
+                 There can be four types of association between the objects:
+
+	1 One to One
+	2 One to Many
+	3 Many to One
+	4 Many to Many
+
+	Let's understand the relationship with real-time examples. For example, One country can have one prime minister (one to one), and a prime minister can have many ministers (one to many). Also, many MP's can have one prime minister (many to one), and many ministers can have many departments (many to many).
+
+    Association can be undirectional or bidirectional.
+	
+11 Aggregation : Is a way to achieve Association. Aggregation represents the relationship where one object contains other objects as a part of its state. 
+				 It represents the weak relationship between objects. It is also termed as a has-a relationship in Java. Like, inheritance represents the is-a relationship. It is another way to reuse objects.
+				 
+12 Composition: The composition is also a way to achieve Association. The composition represents the relationship where one object contains other objects as 
+                a part of its state. There is a strong relationship between the containing object and the dependent object. It is the state where containing objects do not have an independent existence. If you delete the parent object, all the child objects will be deleted automatically.
+				
+13 Naming Convension
+
+14 Instance variable : A variable which is created inside the class but outside the method is known as an instance variable. Instance variable doesn't 
+					   get memory at compile time. It gets memory at runtime when an object or instance is created. That is why it is known as an instance variable.
+					   
+15 What are the different ways to create an object in Java?
+   By new keyword
+   By newInstance() method
+   By clone() method
+   By deserialization
+   By factory method etc.
+   
+16 Anonymous simply means nameless. An object which has no reference is known as an anonymous object. It can be used at the time of object creation only.
+   new Calculation().fact(5); 
+   
+17 Constructor : It is a special type of method which is used to initialize the object.
+				 Every time an object is created using the new() keyword, at least one constructor is called.
+				 It is called constructor because it constructs the values at the time of object creation. 
+				 It is not necessary to write a constructor for a class.
+				 
+	1 Default Constructor OR no-args constructor
+	2 Parameterized Constructor
+	
+	There are two rules defined for the constructor.
+
+	Constructor name must be the same as its class name
+	A Constructor must have no explicit return type
+	A Java constructor cannot be abstract, static, final, and synchronized
+	
+	constructor avalible in 
+	java.lang.reflect package.
+
+18 Static :  It makes your program memory efficient.
+             The static keyword in Java is used for memory management mainly. We can apply static keyword with variables, methods, blocks and nested classes. The static keyword belongs to the class than an instance of the class. 
+			 
+		There are two main restrictions for the static method. They are:
+
+		The static method can not use non static data member or call non-static method directly.
+		this and super cannot be used in static context.
+		
+		Why is the Java main method static?
+		Ans) It is because the object is not required to call a static method. If it were a non-static method, JVM creates an object first then call main() method that will lead the problem of extra memory allocation.
+		
+		Is used to initialize the static data member.
+		It is executed before the main method at the time of classloading.
+		
+19 this keyword : this keyword in java There can be a lot of usage of java this keyword. In java, 
+				  this is a reference variable that refers to the current object
+
+20 Overloading :
+
+21 Overriding :
+
+22 Super : 
+
+23 instance initializer block :
+
+24 Final keyword
+
+25 -> static binding : early binding
+   -> dynamic binding : late binding
+   
+26 The java instanceof operator is used to test whether the object is an instance of the specified type (class or subclass or interface).
+
+27
+
+An interface which has no member is known as a marker or tagged interface, for example, Serializable, Cloneable, Remote, etc. They are used to provide some essential information to the JVM so that JVM may perform some useful operation

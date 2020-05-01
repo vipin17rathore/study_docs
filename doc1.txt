@@ -1,0 +1,24 @@
+hibernate 
+
+1) by default its lazy for converting to eiger we have to mentioned that (fetch=FetchType.EAGER) fetch tye in mapping
+   @OneToMany(mappedBy="engineer",fetch=FetchType.EAGER) 
+   
+2) Eiger get the dataform all the tables which is using in mapping but lazy is not
+
+casing:- hibernate cashing it stores the data in memory
+first level cache :: if i hit the same query in  same session more than one time hibernate provides the first level cache.
+second level cache :: but if session is change need to configure the second level cache 
+					  configuration is done by third party lib
+					  ehCache,OS,Strong
+following things needs to be changed for second level cache
+1) pom.xlm ::: addd dependency
+				two jars:: ehcache.jar
+							hibernate-ehcache.jar
+							
+2) hibernate.cfg.xml :: bydefault second level cache is disable
+			<property name="hibernate.cache.use_second_level_cache">true</property>
+             <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory.class</property>
+   
+3) changes in entity :: add annotation @Cache 
+									   @Cachable
+									

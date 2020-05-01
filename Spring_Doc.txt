@@ -1,0 +1,145 @@
+Spring
+1 Fast flexible and easy
+2 Lighweigh flexible reduce the complexity
+3 MVC java beans model , views and controller
+4 IOC container responsible to create object 
+   Beanc factory  INTERFACE
+   Application context INTERFACE classPathXmlContext is class which is implementing the application context interface
+   Spring by default provide obeject using IOC  
+
+   importnace of IOC::
+   creating object for us
+   managing object for us
+   helping appplication to configuable
+   managing dependencies
+   
+benas are the backbone of spring and managed by spring container	
+
+5) Dependency injection ::
+   contsructor injection :: use <constructor-arg>
+   setter injection < for setter injection we use property tag inside the bean tag >
+   
+   @Autowired
+   @Qualifier
+   
+   autowired by name by type by constructor
+   
+   by default autowired is off we have on that
+   <context:annotation-config>
+   autowired is not possible for int and string dataType
+   @qulifier used after @autowired
+   no setter required if use @autowired
+   
+6 Spring remove dependency and make appplication easy to manage and test
+
+	class employee{
+	   String name;
+	   Address adddress;
+	}
+	
+	employee{
+		this.name=name;
+	    adr = new Address();
+	}
+	in this address class is dependent on emplyee class contructor
+	
+7 Dependency injection make application loosely coupled
+
+8 We can achieve DI using setter injection or constructor injection
+
+<context:component-scan>
+@Component  : used to create bean
+@configuration : tells to spign hey this is configuration file
+@component-scan(basePackages="com.tcs.product")
+
+@value ::  @value("value")
+private string name;  so the name value will be vipin
+
+@required :: used to provide the value if i have declred varaiable but not provided the value it will throw exception
+
+IOC :: ApplicationContext context = new AnnotationConfigApplicationContext(nameOfConfigClass);
+
+interview question ::
+
+1) 
+
+https://www.youtube.com/watch?v=UNQoEMTWfoY&list=PLD9SRxG6ST3HoJhkYdj0w4WEzUM_RBTKt&index=3
+
+Spring by selenium :: https://www.youtube.com/watch?v=r2Q0Jzl2qMQ&list=PL3NrzZBjk6m-nYX072dSaGfyCJ59Q5TEi
+
+Rest web-service::
+
+1)  when one application access another application with following all the
+	guidelines called rest
+	REST : representational state transfer
+	
+produce=MediaType.Application_JSON_VALUE
+PUT ::  used when we want to update some data at client request
+consume :: MediaType. 
+response entity used to send the http response or status code
+
+
+
+core::
+
+1) Stack size is less as compare to heap and heap is used for object and stack is used for thread execution and loacal primitive variable
+2) When stack memory is full, Java runtime throws java.lang.StackOverFlowError whereas if heap memory is full, it throws java.lang.OutOfMemoryError: Java Heap 
+   Space error.
+3) Set by reference ???
+4) JVM Heap memory is physically divided into two parts – Young Generation and Old Generation
+   Young Generation is divided into three parts – Eden Memory and two Survivor Memory spaces.
+5) memory management tool ::jvisualvm 
+
+
+Thread:
+once thread has created it has a life cycle
+new
+runnable
+running
+terminated
+
+1) Stack is used only for execution purpose. Heap is used for storage purpose
+
+Thread Executor::
+
+public class ThreadTest {
+
+	public static void main(String[] args) {
+		
+		int coreCount = Runtime.getRuntime().availableProcessors();
+		System.out.println("coreCount"+coreCount);
+		ExecutorService service =  Executors.newFixedThreadPool(coreCount);
+		for(int i=0;i<15;i++) {
+			service.execute(new thread1());
+			
+		}
+	}
+
+}
+class thread1 implements Runnable{
+
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName());
+		System.out.println("run method");
+	}
+	
+}
+
+four types of thread pool in java
+1 fixed thred pool
+2 cached]
+3 scheduled
+4 single thread executor	
+
+Cached Thread Pool : A thread pool that creates as many threads it needs to execute the task in parrallel. The old available threads will be reused for the new tasks. If a thread is not used during 60 seconds, it will be terminated and removed from the pool. Method : Executors.newCachedThreadPool()
+
+Fixed Thread Pool : A thread pool with a fixed number of threads. If a thread is not available for the task, the task is put in queue waiting for an other task to ends. Method : Executors.newFixedThreadPool()
+
+Scheduled Thread Pool : A thread pool made to schedule future task. Method : Executors.newScheduledThreadPool()
+
+Single Thread Scheduled Pool : A thread pool with only one thread to schedule future task. Method : Executors.newSingleThreadScheduledExecutor()
+
+-->>  <annotation-driven /> for spring annotation
+
+For example, you can handle a GET method to perform read operations, POST methods to create resources, PUT methods to update resources, and DELETE methods to remove resources from the server.

@@ -1,0 +1,76 @@
+Can we overload the main method?
+A Java Constructor returns a value but, what?
+Can we create a program without main method?
+What are the six ways to use this keyword?
+Why is multiple inheritance not supported in Java?
+Why use aggregation?
+Can we override the static method?
+What is covariant return type?
+What are the three usages of Java super keyword?
+Why use instance initializer block?
+What is the usage of a blank final variable?
+What is a marker or tagged interface?
+What is runtime polymorphism or dynamic method dispatch?
+What is the difference between static and dynamic binding?
+How downcasting is possible in Java?
+What is the purpose of a private constructor?
+What is object cloning?
+What are the different ways to create an object in Java
+Why are String objects immutable?
+How to create an immutable class?
+What is string constant pool?
+What code is written by the compiler if you concatenate any string by + (string concatenation operator)?
+What is the difference between StringBuffer and StringBuilder class?
+
+
+1) generics , types and all
+2) serilazation and deceralazation
+3) 
+
+
+jsp interview questions
+https://www.journaldev.com/2110/jsp-interview-questions-and-answers
+
+
+1) by default interface method is public and abstract
+2) by defult interface variable public static and final
+3) interface has no construcor
+4) abstart and interface you can not create obejct
+
+5) inter() method is string when we use intern it points the string to string constant pool
+6) string constant pool dosent allow duplicate value
+
+index = hash & (n-1)
+
+7) JSP cycle  :: 
+	compiation
+	initalition
+	execution
+	destroy
+	
+	What is life cycle of Servlet?
+
+Following is life cycle of Servlet:
+
+    Loaded
+    Initialized
+    Destroy
+    Unloaded
+
+	
+delete from emp where rowid not in (select max(rowid) from emp group by job having count(job)>2 )
+
+<%@ page errorPage="error.jsp" %> 
+<%@ page isErrorPage="true" %>   
+
+@WebServlet(value="/hello", name="hello-servlet")
+
+disable back button
+<%@ page isThreadSafe="false" %>  thread safe jsp page
+
+    <%  
+    response.setHeader("Cache-Control","no-store");   
+    response.setHeader("Pragma","no-cache");   
+    response.setHeader ("Expires", "0"); //prevents caching at the proxy server  
+%>   
+

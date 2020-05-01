@@ -1,0 +1,36 @@
+ Converting a file into a byte stream is known as Serialization. The objects in the file is converted to the bytes for security purposes. 
+ For this, we need to implement java.io.Serializable interface. It has no method to define.
+
+Variables that are marked as transient will not be a part of the serialization. So we can skip the serialization for the variables in the file by 
+using a transient keyword.
+
+
+1) Stack and heap
+2) jsp and servlet life cycle
+3) aggregation association and compositation
+4) ternary operator done
+5) how to create sub package in java using eclipse
+6 serilazitaion and decleration javaTpoint
+7 clonable
+8 queue deque and stack   
+Q90. What's meant by anonymous class?  done
+10 duplicate string in java (char in string)
+11 inteview que  String
+
+https://javaconceptoftheday.com/java-interview-programs-on-strings/
+
+1) CallableStatement  how to execute procedure in jdbc and normal select statement
+2) implict obect 
+3) jsp servlet  
+4) joins left outer join right outer join
+5) seconday key and foregin key
+6) enum
+7) arrayList and vector
+8) send redirect and request dispatch
+9) how to create conn un jdbc
+10) throw and throws
+11) post and get delete 
+12) rest web service
+
+
+
