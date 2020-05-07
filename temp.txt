@@ -2,3 +2,13 @@ C:\Program Files\RabbitMQ Server\rabbitmq_server-3.8.3\sbin>rabbitmq-plugins ena
 
 clean org.jacoco:jacoco-maven-plugin:prepare-agent install
 sonar:sonar
+
+Token :: THC05432024031128
+
+https://covid19.mhpolice.in/
+
+Got Stuck In Thane Wants To Go Home (Ghansoli).I Am IT Employee & I Dont Have Laptop Here. Please Provide Approval.I Am Ready To Travel In Early Morning Between 5 Am & 7 Am
+
+B 104 Panchvati CHS Sector 5 Ghansoli Mumbai 400701
+
+Ajita Society ,Kopri ,Thane East 400603

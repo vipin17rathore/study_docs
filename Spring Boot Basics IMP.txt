@@ -1,0 +1,222 @@
+SPRING BOOT
+
+1 4 method and its implementaion
+  GET
+  POST
+  Delete
+  PUT
+  
+2 @PathVariable
+3 @RequestBody
+4 @QueryParam
+5 ResponseEntity for response code 
+6 addHeaders 
+7. @ExceptionHandler and @Valid with exception handling ResponseEntityExceptionHandler
+8 Hateoas ?? pending
+9  swagger defination http://localhost:8787/v2/api-docs
+  swagger ui uurl : 
+
+10 SPRING CLOUD
+	Netflix various component(euerka , zuul(8765 default port), hystrix ,  achalus )
+	Eureka- naming server (8761 default port)
+	ribbon : client side load balancing
+	hystrix : fault tolerance
+
+
+Eureka Server ::
+
+link: https://www.youtube.com/watch?v=VfzLIOY646I&list=PLO0KWyajXMh4u-DhB7bXoRQ21rfkF_cSU&index=4
+Eureka Server is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server
+
+1) For eureke server need eureka server dependencey time of project creation
+2) @EnableEurekaServer in main class
+3) server port in properties file and start the service
+4) than we can access localhost://port
+
+Eureka client  
+
+: is registered with eureka server 
+
+1) For eureke server need eureka discovery client time of project creation
+2) @EnableEurekaClient in main class
+3) server port in properties file and eureka server entry in eureka client 
+   eureka.client.serviceUrl.defaultZone=http://localhost:9595/eureka/
+   spring.cloud.config.server.native.search-locations=file:///E:/Workspace_STS/config-files  (which will refer the all the configuration)
+   in file directry will keep properties file to read all the configuration for client server
+   
+4) than first we will start server than client
+5) now we can access eureka client in eureka server local running instance
+
+
+Config server setup :: we can do this by two method first one is git or normal file directory i have done this by file directory in local system.
+1 config server setup :
+   1 need to add spring cloud config dependency
+   2 spring.profiles.active=native in properties file
+   
+2 config client setip:
+  1 in properties file : spring.cloud.config.uri=http://localhost:8888 (url is config server url)
+
+
+Feign Client Setup:
+
+Spring Cloud OpenFeign used to call rest servie in easy way.
+setup process::
+1 add annotation in main class @EnableFeignClients("com.boa.SpringEurekaClient")
+2 required one interface with anotation as @FeignClient(name="Practice",url="localhost:2020") practice is service which we need to call and url is mentioned 
+  than in interface we have to declare one method with rest mapping of that particular service.
+  
+@FeignClient(name="Practice",url="http://localhost:9090/")*/
+public interface FeignClientInterface {
+	@GetMapping("/getEmpData")
+	public Employee getDataFromServiceUsingFeign();
+}
+
+dependencey
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+ 
+once this done we need to call this method in controller so we will get tha data from service
+
+Ribbon load balance::
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		</dependency>
+		
+it distributed the load to the different-different service
+
+@FeignClient(name="Practice")
+@RibbonClient(name="Practice")
+public interface FeignClientInterface {
+	@GetMapping("/getEmpData")
+	public Employee getDataFromServiceUsingFeign();
+}
+
+Required entry in properties file
+Practice.ribbon.listOfServers=http://localhost:9090,http://localhost:9091
+<Practice is service name>
+
+In spring boot we can create multiple instance of one service using run configuation than right click on that and click on duplicate
+than required port entry in vm parameter
+-Dserver.port=9091
+
+---------------------------------------------
+
+Zuul Api Gateway ::
+
+Zuul Server is an API Gateway application. It handles all the requests and performs the dynamic routing of microservice applications. It works as a front door for all the requests. It is also known as Edge Server. Zuul is built to enable dynamic routing, monitoring, resiliency, and security.
+
+required dependencey..
+
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+</dependency>
+
+need to create logginFilter class and extends as ZuulFilter
+
+public boolean shouldFilter() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public Object run() throws ZuulException {
+		HttpServletRequest request = RequestContext.getCurrentContext().getRequest();
+		logger.info("request -> {} request uri ->{} ",request , request.getRequestURI());
+		System.out.println("request--->"+request+" request uri--->"+request.getRequestURI());
+		return null;
+	}
+
+	@Override
+	public String filterType() {
+		// TODO Auto-generated method stub
+		return "pre";
+	}
+
+	@Override
+	public int filterOrder() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+	
+
+https://www.javatpoint.com/executing-a-request-through-zuul-api-gateway
+
+Requrired to add eureka server entry in property file
+how to test ::
+http://zullserverPort/eurekaClient-application-name/service-name(controller-request
+
+
+----------------------------------------------------------------------------------------------
+
+Spring Cloud Sleuth: A Spring Cloud library that lets you track the progress of subsequent microservices by adding trace and span id's on the appropriate HTTP request headers. ... Zipkin: A Java-based distributed tracing application that helps gather timing data for every request propagated between independent services.
+
+zipkin setup
+https://sivalabs.in/2018/03/microservices-part-6-distributed-tracing-with-spring-cloud-sleuth-and-zipkin/
+
+
+
+
+-------------------------------
+
+SPring boot basics::
+
+embeded server use ?
+1 no external configution req in spring boot
+2 provide embeded server
+3 spring boot run method return application context
+4 support starter depedency ?
+5 some starte depedency web , jpa , security , test ,jdbc , actuator
+6 we can play with JPA using entityManage and JPARepository it provide all the required method like persist, save, delete findAll findById
+
+
+-----------------------
+
+Swagger ::
+
+Used for documentation its basically roadmap of house type
+http://localhost:9091/v2/api-docs
+http://localhost:9091/swagger-ui.html
+
+dependencey required 
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+		    <version>2.4.0</version>
+		</dependency>
+		
+one config file required 
+
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+	
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2);
+	}
+}
+
+
+------------------------------------------
+
+Sonar default port
+https://www.youtube.com/watch?v=hyBznKcoKEg
+http://localhost:9000/about
