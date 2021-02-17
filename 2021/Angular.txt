@@ -1,0 +1,50 @@
+1 npm upgrade for windows
+  npm install –g npm@latest , npm install –g node@latest
+  
+2 VS code
+  codepen
+ 
+3 -------Angular---
+  Component
+  Directive
+  Service
+  Template
+  Data Binding
+  Dependency Injection
+  
+  component control the view
+  module: container for one or more component
+  
+4 Interpolation : data move form one direction
+                  from component to view/html   use by {{ }}
+5 Property binding [] it works with non string as well 
+  class binding 
+  style binding
+	
+6 event binding :
+  <button (click)='show()'>Press the button</button> hmtl
+  component  
+     show(){
+      console.log("Event binding....")
+     }
+	 
+	 
+7 two way databinding [()]
+
+8 parent to child component data trasfer
+  @Input parent to child 
+  @Output child to parent
+   from child to parent we need to use the event and event emitter in our componentto pass the data from child to parent
+   
+9 directive : *ngIf
+			  *ngFor
+			  *ngSwitch
+			  
+10 pipe |
+   data percentage currency cases
+   
+11 service : component consumes service , require to import httpclient module and then call service using get or post in service component tha than we need to subscribet the response
+  
+12 dependency injection using constructor 
+
+13 observable  

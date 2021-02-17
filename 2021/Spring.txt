@@ -1,0 +1,25 @@
+Spring
+
+1. loose coulpling :
+2. Beans in spring : @Component,
+3. Annotation @Primary
+  This annotation is used on a class that needs to be taken by spring on a primary basis. For instance, if ClassX is @Component annotated and is dependent on both Class1 and Class2 (both @Component annotated) then the compiler would report an error. To show the primary class between Class1 and Class2 we use @Primary.
+  
+4. Dependency Injection
+5 IOC
+6. @Component can be used in any of the layers. Whereas, the @Controller is used in the controller/web layer. @Service is used in the business layer and @Repository is used in the DAO layer.
+@RequestParam = > is for parameter which is avalibale in url
+
+==> Spring MVC Navin Tutorial
+==> Sprinng boot Navin Video
+==> Spring boot deployment using jar and war
+==> Spring Interview Questions
+==> Microservices
+==> Basic Hibernate
+
+==> Basic JSP
+==> Bacis Servlet
+==> Basic HTML , CSS for like interview questions
+==> SQL and PLSQL
+==> GIT
+==> AWS

@@ -1,0 +1,84 @@
+Java
+
+---DataType---
+ 8 type of data type avaliable in java
+ boolen
+ byte 
+ char 
+ short
+ int 
+ long
+ float
+ double
+ 
+Wrapper Class
+overflow and underflow
+
+Diff ways to create object 
+--By new keyword
+--By newInstance() method
+--By clone() method
+
+Anonymous object :::
+Anonymous simply means nameless. An object which has no reference is known as an anonymous object. It can be used at the time of object creation only.
+
+https://www.javatpoint.com/object-and-class-in-java
+https://www.javatpoint.com/java-main-method
+https://www.javatpoint.com/angularjs-tutorial
+ 
+ 
+ Java abs() method
+ ------
+1) Wrapper class
+ --convert primitive into object and object into primitive :
+ auto boxing and unboxing
+ 
+	  auto boxing
+	  int num = 10; // int primitive
+      Integer obj = Integer.valueOf(num); // creating a wrapper class object
+      System.out.println(num + " " + obj);
+ 
+	  unboxing
+	  
+	  Integer obj = new Integer(10); // Creating Wrapper class object
+      int num = obj.intValue(); // Converting the wrapper object to primitive datatype
+      System.out.println(num + " " + obj);
+	  
+2. Singleton class is a class whose only one instance can be created at any given time, in one JVM. 
+  A class can be made singleton by making its constructor private.
+  In terms of practical use Singleton patterns are used in logging, caches, thread pools, configuration settings, device driver objects.
+  
+  public class SingltonClass {
+	
+	private static SingltonClass singlton = null;
+
+	private SingltonClass(){
+		
+	}
+	
+	public static SingltonClass getInstance() {
+		if(singlton==null) {
+			singlton = new SingltonClass();
+		}
+		return singlton; 
+	} 
+	
+	public String getMessage() {
+		return "Singlton Class";
+	}
+
+
+3.
+Jdava doesn’t use pointers because they are unsafe and increases the complexity of the program. Since, Java is known for its simplicity of code
+
+4. A Marker interface can be defined as the interface having no data member and member functions. In simpler terms, an empty interface is called the Marker interface. The most common examples of Marker interface in Java are Serializable, Cloneable etc. The marker interface can be declared as follows.
+
+public interface Serializable{
+}
+
+Use: 
+Marker interface is used as a tag to inform a message to the Java compiler so that it can add special behaviour to the class implementing it.
+
+5. 
+https://www.studytonight.com/tests/?subject=java
+https://www.edureka.co/blog/interview-questions/java-interview-questions/#basic

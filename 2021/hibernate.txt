@@ -1,0 +1,66 @@
+------Hibernate-----
+1. What is hibernate
+  -- hibernate is ORM(object relational mapping) tool used to map java objects and database object.
+               POJO <----ORM ----> Database object 
+2. How we can do tha mapping
+   --it provides the JPA implementation hence we can use JPA annotation and xmml configuration to achieve the mapping
+
+3. Why hibernate and its advantages
+  -- it eliminates the boiler-plate code that comes in jdbc
+  -- it support HQL with is more object oriented.
+  -- it provides transaction management implicitly
+  -- support cashing for better performance
+  -- it throws Jdbc and HibernateException which are the unchecked exception so we don't need to worry aboout the handling with try and catch.
+  
+4. important interface used in hibernate
+   1 SessionFactory : it used to retrive the session object from database and cache it so reuse again and again. sessionFactory object par database connection
+						like mysql and oracle
+   2 Session :it used to get a physical conn with database. it provide the methods for CRUD operation.
+   
+   3 Transaction : specify single unit of work
+   
+   first will create the sessionFactory object using that we will get the session object and using session we will get the transaction object.
+   
+5 Imp annotations
+  -- Entity -to specify an entity bean
+  -- Table -to define the table name in database
+  -- Id : for primary key
+  -- Column : for column name
+  -- OneToOne for mapping like oneToMany manyToOne ManyToMany
+  -- PrimaryKeyJoinColumn - used to define property for foregin key
+  
+6 Hibernate configuration file
+  containsa all the databse property and used to initialize the session factory 
+  name as hibernate.cfg.xml
+  
+7 get() and load() both used to retrive the data from database
+  get load the data as soon as it called. 
+  and load when actually required load support the lazy loading
+  
+  if no data avaliable than load throws exception.
+  
+8 hiberate cashing
+  caching is used for applciation faster and improves the performance.
+  the idea is to build cache to reduce the no of database queries. 
+  1 first level : associated with session object.
+			      it is enabled by default and there is no way to disable
+				  any object cache in session not visible to other session. if session is closed all the object will be lost.
+  2 second level : by defult it is disabled but we can enable using configuration.
+				EHCache and infinispan implementation for second level cache.
+				
+				Hibernate second level cache uses a common cache for all the session object of a session factory. It is useful if you have multiple session objects from a session factory. SessionFactory holds the second level cache data. It is global for all the session objects and not enabled by default.
+				
+				dependny for EHCache
+				<dependny>
+					<groupId>org.hibernate</groupid>
+					<artifactId>hiberate-ehcache</artifactId>
+				<dependny>
+				
+				than we need to enable the second_level_cache in configuration file
+					
+  3 query cache : The query cache is responsible for caching the results of queries
+                 configuration: use_query_cache==true
+				 
+
+  
+  

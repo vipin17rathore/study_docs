@@ -1,0 +1,134 @@
+1.Spring                                     Spring Boot
+  is framework	                              its module
+  Complex in terms of configuration           less complex
+
+2. Use of spring boot application
+  - Stand alone spring boot application
+  - Aims at rapid development
+  - It provides following things
+    1 Auto dependency
+	2 embeded http server tomcat and jetty based on configuration
+	3 spring boot cli
+	4 cloud service
+	5 management endpoint
+	
+3. Advantages
+  - Provide auto configuration for quick start of application
+  - create stand alone application
+  - comes up with embeded http server to avoid usages of war file
+  - it reduce the development effort and simplify the maven configuration
+  - consist wide range of api monitoring managing application in dev and prod
+  - integerates with spring eco-system like spring jdbc , spring orm , spring data , spring security and avoid the boilerplate code
+  
+4. Feature
+  - Spring CLI
+  - Spring Dependencey
+  - Spring initializer
+  - Auto configuration
+  - Spring Actuator
+  - Logging and Security
+  
+5. Ways to create the application
+  - CLI
+  - Initializer
+  - Spring Maven project
+  
+6. Possible source of exernal configuration
+  - Applciation properties
+  - Command line properties
+  - Profile specific properties
+  
+7.What is spring boot starter ans some common starter
+  - Starter is set of convenient dependencies managemet. Starter makes development rapid and easy.
+  - all comes in org.springframework.boot group
+  some common starter
+  
+  1 spring-boot-starter
+  2 spring-boot-starter-jdbc
+  3 spring-boot-starter-web
+  4 spring-boot-starter-jpa
+  5 spring-boot-starter-security
+  6 spring-boot-starter-aop
+  7 spring-boot-starter-test
+  
+8. Spring actuator
+ - using this feature we can see whats heppening inside the running application.
+ - wee can easily debug and the application at running time.
+ 
+9. Dependencey Management : Is used to manage the dependencies and configuration automatically 
+   without specifing the version of any that dependency.
+ 
+10. Miminum Requiremt of spring boot application
+  - Java 8+
+  - Spring Framework 5.19 +
+  - Maven 3.3 +
+  - Tomcat 9 
+  - Sevlet Version 4.0 +
+
+11. Spring dev tools is set of tools aims to make development easier. if application running in prod it automatically disabled.
+
+12. Where we mention the databse properties
+    : in application.properties
+     spring.datasource.username
+	 spring.datasource.password
+
+13. Main class of spring boot application
+   - public class 
+   - @SpringBootApplication annotation
+   - main method
+   
+    @SpringBootApplication
+	public class Test(){
+		public static void main(String args[]){
+		  SpringApplication.run(Test.class,args);
+		}
+	}
+	
+14.how to enable http2 support in spring boot
+   - server.http2.enabled = true
+   
+15. Diff btw @RequestMapping and @RestController
+   - @RestController = @controller + @ResponseBody
+   
+16. JPA :  Java Persistence API
+   - JPA is used to reduce the boilerplate code.
+   - Hibernate : is an implementation of JPA offer a loose coupling.
+
+17. Diff btw @SpringBootApplication and @EnableAutoConfiguration
+   - @SpringBootApplication is combination of @Configuration @ComponentScan and @EnableAutoConfiguration
+   - @EnableAutoConfiguration :: Enable auto-configuration of the Spring Application Context, attempting to guess and configure beans that you are likely to   need. Auto-configuration classes are usually applied based on your classpath and what beans you have defined. For example, if you have tomcat-embedded.
+18. how to deply spring boot application as jar or war.
+  - 
+  
+19. Best way to expose custom application configuration with sppring boot
+   using @Value annotation
+   
+20. how will remove and override the tomact server
+  - we will exclued the tomact server using tag <exclusion> in web dependency
+  
+21. how to disable embeded web application or disable default webe server
+  - spring.main.web-application-type = none
+  
+22. how to disable particular class for auto configuration.
+	- using @EnableAutoConfiguration(exclude={Test.class})
+	
+23. @RestController : convert the response into xml or json so api read that. beacause its combination of @controller and @ResponseBody annotation.
+
+24. How to use profile in spring boot
+    - in application.properties mention spring.profile.active = prod
+	and create different properties file name as application-prod.properties , application-dev.properties
+	
+25. Spring actuatot and its use
+    -means moving or controlling
+	-spring boot actuator provide additional feature that help you to monitor and manage application when you pushed into prod
+     it includes additional feature like auditing , health it generate automatically.
+    - we can enable feature using dependencies 
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>	
+  
+   url for actuator : http://localhost:8081/actuator , http://localhost:8081/actuator/health will get server status using this, http://localhost:8081/info 
+   some end point we can explecetly added into application which through we can get beans , env details server details and all.
+   
+26. Snapshot ??

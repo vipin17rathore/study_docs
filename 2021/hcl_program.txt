@@ -1,0 +1,73 @@
+import java.util.Scanner;
+import java.util.*;
+
+class solution {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String res = "NO";
+        //int a = 5;
+     //   int b = 4;
+      //  int c = 3;
+        
+       System.out.println("vipin");
+        
+        int t = sc.nextInt();
+         int [][] myarray = new int[3][t-1];
+        for (int n = 0; n < t; n++) {
+             a = sc.nextInt();
+             b = sc.nextInt();
+             c = sc.nextInt();
+             
+             myarray[0][n] = a;
+             myarray[1][n] = b;
+             myarray[2][n] = c;
+             
+          //  System.out.println("a"+a);
+          //  System.out.println("b"+b);
+          //  System.out.println("c"+c);
+        }
+        
+        int max = 0;
+        
+        for(int i=0;i<t;i++){
+            a  = myarray[0][i];
+            b  = myarray[1][i];
+            c  = myarray[2][i];
+        
+        if(a>=b && a>=c){
+            a = a-2;
+            b = b-1;
+            c = c-1;
+        }
+        
+        if(b>=a && b>=c){
+            b = b-2;
+            a = a-1;
+            c = c-1;
+        }
+        
+          if(c>=a && c>=a){
+            c = c-2;
+            a = a-1;
+            b = b-1;
+        }
+        
+      //  System.out.println(1-2);
+        
+        if(a==0 && b==0 && c ==0){
+            res = "YES";
+            break;
+            
+        }
+        
+    }
+
+   System.out.println(res);
+   System.out.println(Arrays.toString(myarray));
+   System.out.println("vipin");
+        
+
+    }
+}

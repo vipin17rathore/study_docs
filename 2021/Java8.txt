@@ -1,0 +1,63 @@
+------ Java 8 --------
+1. Why java 8 and its agenda :
+   - Main reason to intruduce is the conciseness code(less code with same function).
+   - Java brings with functional programming (lambda expression which is powerful tool to create the conciseness code)
+   -  java was observed that mid 20s java lost large market. 
+
+2. Features :
+   - lambda expression
+   - Stream API
+   - Default method
+   - Static method
+   - functional interface
+   - DateTime API
+   - Method reference
+   
+3. What is labda expression :
+   its anonymous function (without name, without return type, without access modifier and having one lambda expression (->) symbol )
+   
+4 Functional interface : 
+  - are those interface which can have only one abstract method
+  - it can have any number for static and default method no restrication on that.
+  - some functional interface are Runnable , Comparable
+  
+5. Functional interface provide the reference to the lambda expression.
+   - Comparator<String> c = (s1,s2) -> s1.compareTo(s2);
+
+6. Can we create our own functional interface
+  - yes we can . one interface with annotation as @functionalInterface and one abstract method. there is no restriction to add static and default method 
+  - is will add more than one abstarct method compiler will thow complie time error.
+
+7. Method reference is replacement of lambda expression it is used to refer the method of functional interface to an existing method.
+   method reference is alternative of lambda expression.
+   
+8. Default Method : method is interface with implementaion this will not affect to the other interface which are implementing this.
+
+9 can we overrid the default method in java.
+  Yes if we are not setisfying with default implementaion.
+  
+10 Default keyword is the access modifier 
+   : No before java 8 we were using this in switch case.
+
+11 how we can override the default method 
+   - simliar to the overding but we will not use the deafult keyword in class
+   - we can reduce the visibility from public to private , protected and default.
+
+12 can we use default implementation of hashcode method in interface 
+   : no we can not use default implementaion of java.lang.object class it will thorw compile time error.
+   
+13 how default method in interface cop with diamod problem.
+  - if two interface has same default method than its diamond problem
+  - in such situation code will not compile and thow compile time error as duplicate default method.
+  - how to solve : in implemented class use interfaceName.super.methodName();
+
+14. why static method introduced in java 8
+  - because u can cl interface using inteface name without its object.
+  - interface never contain constructor , block.
+  - we got this flexibility in java 8  only.
+  - it saves a memory no need to create class and than its implementation and all.
+
+15 static method implementation not avaliable by default.(this is disadvantages of static method of inteface that is not avaliable to implementing class) 
+   - you need to call static method explicitly.
+16 
+ 
