@@ -53,11 +53,101 @@
 
 14. why static method introduced in java 8
   - because u can cl interface using inteface name without its object.
-  - interface never contain constructor , block.
+  - interface never contain constructor , block. 
   - we got this flexibility in java 8  only.
   - it saves a memory no need to create class and than its implementation and all.
 
 15 static method implementation not avaliable by default.(this is disadvantages of static method of inteface that is not avaliable to implementing class) 
    - you need to call static method explicitly.
-16 
- 
+
+------- Stream --------
+
+1. -- if we want to process bulk object than we will go with stream concept.
+   -- way to operate on collection in java 8 stream
+   -- it is special clss that allows processing  collections object in functional manner.
+   -- ex want to fetch all the values from list whose value is greater than 15.
+   
+2. diff btw java stream and java.io.stream 
+   -- java.io.stream relaed to files data which is used to written to a file or read from a file
+   -- java streams is related to collection object. if we want to perform some operation than will go with stream.
+  
+                                   Stream
+								     |
+	                   ---------------------------------
+					   |                                |
+			       Configuration                      Processing
+				       |
+		        -----------------
+				|               |
+			Filter             Map
+    (To reduce the value)	(create the object with all th values)	
+	
+	
+	Stream main concept is creation  --> configuration --> Processing
+	we can achieve procession using following methods 
+	collect, count,forEach,sorted,toArray,of,min Max
+	
+3. Predicates
+   -- predifined functional interface (having only one abstract method)
+   -- whenever we want to check the boolean condition than will use the predicate
+   -- one abastract method is 
+      public boolean test(T t);
+	  
+	  Predicate<String>checkLength = s-> s.length()>5;
+		System.out.println(checkLength.test("Java T point"));   //
+		
+   Advantages : code resuability 
+                less lines of code
+				conditional check is holded by functional interface
+				
+4 Predicate Joining
+  you can combine the predicate
+  three ways to join AND , OR , Negate
+  
+  Ex : if we want to test 2  condition string lenght as well as string lengh is even than will use predicate joining.
+  
+  
+5 Function :
+  -- fucntion is predified function interfce (having only one abstract method)
+  -- method is apply(T,t)
+  -- we pass the input based on that it return the out not necessarily (boolean)
+  -- function return type is not fixed so we have to mention both input and return type as well
+  -- avaliable in package java.util.function
+  
+  Function<Integer,Integer> square = i -> i*i;
+  System.out.println(square.apply(10));
+  
+  diff btw predicate and function 
+  1 predicate return boolena value
+  2 it takes 1 argument
+  3 abstract method is test
+  
+  1 function return type of object  it perform operation and return the result
+  2 it return in form fo Function<T,R> need to specify the return type as well
+  3 abstract method is apply
+  
+6 Function chaining :
+  andThen and compose
+  
+7 Consumer Function Interface:
+  it take one obejct and never return anything. it comsumes only
+  method is public void accept(T t)
+  it take input perform operation based on condition and never return anything.
+  
+  consumer Chaining : one method andThen. no compose method avaliable
+
+8 Supplier Functional Interface
+  it only supply never consume anything.
+  it does not take any input only retun the output.
+     public R get(); method
+
+  -- no chaining required because no input is there. beacaue chaining is required when we have one input and required multiple output	
+
+ # advantages :
+  -- write once use anywhere
+  -- code resuability 
+  
+9 why bisupplier not possible 
+  because there is no input so bisupplier doesn't work.
+  
+10 there is no triPredicate, triFnction, triConsumer in java

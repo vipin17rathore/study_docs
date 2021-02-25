@@ -1,1 +1,8 @@
-SQL
+--SQL--
+1 Select 
+2 Distinct
+3 where
+4 AND ,OR, Not
+5 order by  ASC|DESC
+6 NULL: A field with a NULL value is a field with no value.
+

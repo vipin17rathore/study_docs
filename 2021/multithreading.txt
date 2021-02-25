@@ -1,0 +1,72 @@
+------------MultiThreading---------
+
+1. Multitasking : achieve multiple task at same time called
+   Ex: at same time CPU running browser as well as vlc as well as microsoft doc
+   so i this case vlc is a process - video , music , time all are thread
+   
+   we can achieve the multitasking using two ways
+   1. Multi processing
+   2. MultiThreading
+
+2. Multi Processing:
+   When one system is connected to multiple processor in order to comelete the task.
+   
+   vlc
+    |
+  ---------------
+     OS
+  ----------------
+  |      |      |
+ CPU    CPU    CPU
+ 
+ it is uitable for system or OS label.
+ 
+3. MultiThreading: executing multiple thread at same time (sub process or small task).
+   mostly used in games ,animationa and software
+   
+4. Diff btw process and thread
+       process                                                thread
+  heavy weight                                         lightweight
+  contex switching takes more time                     less time
+  communication takes more time						   less time
+  each process has diff addresss space                 same
+  process are not dependent on each other			   are dependent on each other	   
+  
+5. life cycle
+  
+  new                              runnable                               running                                dead/terminated
+ (when thread is created)     thread goes into this state         thread goes into this state                   when task is completed
+							  when will call t.start() method    when JVM allocate the processor(run method)
+							  
+							  
+6. Two ways to create the the using thread class and runnable interface.
+   best way is runnable interface.
+   
+7. how many things we can achieve using thread 
+   1 one task one thread
+   2 one task multiple thread
+   3 multiple task one thread  -- this is not possbile
+   4 multiple task multiple thread
+							  
+							  
+8.Thread class constructor
+  Thread()
+  Thread(runnable target)
+  Thread(String name)
+  Thread(runnable target,string name)
+  
+  Thread(threadGroup tg,runnable target)
+  Thread(threadGroup tg,String name)
+  Thread(threadGroup tg,runnable target,String name)
+  Thread(threadGroup tg,runnable target,String name,StackSize)
+  
+9. Methods
+   basic method - run(),start(),currentThread, isAlive
+   naming method - getName(),setName()   
+   daemon thread -  isDaemon ,setDaemon(boolean b)
+   priority - getPriorty(),setPriority()
+   preventing thread - sleep(),yield() , join()
+   
+   wait notify notifyAll methods from object class
+   
+10.

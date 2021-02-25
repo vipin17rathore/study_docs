@@ -1,0 +1,51 @@
+----collections---
+1.How we can achieve the thread safety.
+  using synchronization
+  using volatile keyword
+  using final keyword
+  using atomic variable
+  
+2. copyonWriteArrayList clss : synchronized list
+
+3. how to remove duplicate element from list   
+   using linkedhasset
+   stream.distinct method
+
+4.how to compare two arraylist first sort it using Collections class than use .equals method
+
+5.removeAll
+  retainAll
+
+6.how to iterate the hashmap
+  using iterator
+  using foreach loop
+  using lambda foreach method
+
+  method put,remove   
+  
+7 how to compare two hashmap
+  using .equals method
+  or using .equals with keySet()
+  
+8 internal working of hashmap 
+   uses hashing hashcode()
+   default bucket size is 16
+   buckect contains 16 node each node contians key value , hash and maintain the next pointer also 
+   each node behave like a linkedList
+   
+9 fast performance 
+  concureentHashMap inernally divide into 16 segmant 
+  lock occur only on when we perform the write operation not for reading
+  Segment locking occur 
+  null key and null values are not allowed
+  concurrentHashMap never throw concureentHashMap modification exception but we can get that in synchronizedMap 	 	
+  
+10 what is the diff btw internal working of hashMap and linkedHashMap
+   internally hashmap works on linkedlist concept but linkedhashmap works on dubblyLinkedlist concept 
+   in this each node connect to its previous and next index as well.
+   
+11 how put works in hashmap : on hashing principle
+12 what will happen if multithread application will use the hasmap
+   data mighht be currupted becase so many thread will try to update the value at same time
+   
+13
