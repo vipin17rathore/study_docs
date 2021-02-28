@@ -31,7 +31,8 @@
 7. Method reference is replacement of lambda expression it is used to refer the method of functional interface to an existing method.
    method reference is alternative of lambda expression.
    
-8. Default Method : method is interface with implementaion this will not affect to the other interface which are implementing this.
+8. Default Method : method is interface with implementaion this will not affect to the 
+ interface which are implementing this.
 
 9 can we overrid the default method in java.
   Yes if we are not setisfying with default implementaion.
@@ -151,3 +152,9 @@
   because there is no input so bisupplier doesn't work.
   
 10 there is no triPredicate, triFnction, triConsumer in java
+
+
+localDate .now
+localTIme .now 
+
+11 map return single value of object but flatMap return multiple values (Stream of object).

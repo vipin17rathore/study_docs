@@ -1,4 +1,5 @@
 ------------MultiThreading---------
+context switching and interprocess communication.  
 
 1. Multitasking : achieve multiple task at same time called
    Ex: at same time CPU running browser as well as vlc as well as microsoft doc
@@ -36,7 +37,7 @@
   
   new                              runnable                               running                                dead/terminated
  (when thread is created)     thread goes into this state         thread goes into this state                   when task is completed
-							  when will call t.start() method    when JVM allocate the processor(run method)
+  but thread is not alive	when will call t.start() method    when JVM allocate the processor(run method)
 							  
 							  
 6. Two ways to create the the using thread class and runnable interface.
@@ -69,4 +70,76 @@
    
    wait notify notifyAll methods from object class
    
-10.
+10. sleep yield thread executer , interrupt
+
+11. Thread scheduling :
+    exceution of multiple thread on sinlge in single cpu or multiple cpu in some order.
+	
+12 thread priority :
+   
+   pubic final int getPriority()
+   pubic final void setPriority(int a)
+   
+13 Thread Scheduler in Java
+   
+14 Exception:
+   illigal argument exception(priority , )
+   IllegalThreadStateException  (if same thread start multiple times)
+   security exception : if the current thread is not allowed to access this thread.
+   
+15 thread naming : use of naming for debug purpose
+   deafult thread  : thread-0  
+   
+16 yield():
+   A yield() method is a static method of Thread class and 
+   it can stop the currently executing thread and will give a chance to other waiting threads of the same priority. If in case there are no waiting threads or if all the waiting threads have low priority then the same thread will continue its execution 
+   
+17 sleep method:
+   Thread. sleep() method can be used to pause the execution of current thread for specified time in milliseconds. The argument value for milliseconds can't be negative, else it throws IllegalArgumentException 
+   
+   exception handing required otherwise will get compile time error ligh on off is good example.
+   (InterruptedException) 
+   
+18 intrupt()
+  
+If any thread is in sleeping or waiting state (i.e. sleep() or wait() is invoked), calling the interrupt() method on the thread, breaks out the sleeping or waiting state throwing InterruptedException. If the thread is not in the sleeping or waiting state, calling the interrupt() method performs normal behaviour and doesn't interrupt the thread but sets the interrupt flag to true. Let's first see the methods provided by the Thread class for thread interruption.
+   
+19. Join()
+    The join() method waits for a thread to die. In other words, it causes the currently running threads to stop executing until the thread it joins with completes its task.
+	
+20. Deadlock condition :
+   
+21 Deamon Thread:
+   the thead which is executing in background.
+   gc , signal dipatcher
+
+
+11 Synchronization internally use the lock
+   : Synchronization in java is the capability to control the access of multiple threads to any shared resource.
+    Java Synchronization is better option where we want to allow only one thread to access the shared resource
+
+           |
+   ----------------------------
+   |                          |
+method exclusive            Cooperation
+synchronized method           Wait()
+synchronized block            notify
+static synchronization        notifyAll()
+    
+synchronized block : 
+          -- to get the lock of current object 
+              synchronized(this){}
+		   
+		  -- synchronized (particular object){
+		  }
+		  
+		  synchronized(clssName.class){
+		  }
+12 Race condition : is multiple thread are operating simultaneously on the same java object than there may be chance of data inconcestency
+                    problem we can overcome this using synchronization.
+					
+13 InterThread communication :
+   Frame and amazon example
+   wait notify and notifyAll call only in synchronized area otherwise will get run time ex as illigal monitor state exp.
+   
+14 starvation : low priority thread has to wait until completing all high priority this waiting may be long waitng but ends certain points which is not 
