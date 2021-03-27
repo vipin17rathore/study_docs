@@ -1,0 +1,51 @@
+---Others---
+string.indexof
+string.isEmpty
+replace
+trim
+toUpperCase
+tOLowerCase
+
+
+
+Spring, Oracle and Program is Pending 
+1 group by 
+2 having
+3 null
+4 min max count 
+5 in btw
+6 joins
+7 exists
+8 to_char
+9 sub_query *
+10 nvl
+11 decode conditional
+12 union
+
+
+procedure
+function
+trigger
+index 
+
+oracle tutorials
+https://www.sqltutorial.org/
+
+ 
+1 distinct
+2 limit
+3 operator
+4 group by having
+--select sum(e.sal),  e.deptno,e.ename  from emp e group by deptno,e.ename having sum(e.sal)>2000
+5
+
+
+Rest API
+Spring 
+Java 8 practice employee object sorting
+comparator how to sort the list
+
+If two objects have the same hashcode then they are NOT necessarily equal. Otherwise you will have discovered the perfect hash function. But the opposite is true: if the objects are equal, then they must have the same hashcode .
+
+http codes
+https://developer.amazon.com/docs/amazon-drive/ad-restful-api-response-codes.html

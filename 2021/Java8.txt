@@ -14,12 +14,14 @@
    - Method reference
    
 3. What is labda expression :
-   its anonymous function (without name, without return type, without access modifier and having one lambda expression (->) symbol )
+   its anonymous function (without name, without return type, without access modifier and having one lambda expression () -> Arrow/lambda symbol)
+   Lambda expression helps us to write our code in functional style
    
-4 Functional interface : 
+4 Functional interface :  Functional interfaces are also known as Single Abstract Method Interfaces 
   - are those interface which can have only one abstract method
   - it can have any number for static and default method no restrication on that.
   - some functional interface are Runnable , Comparable
+  
   
 5. Functional interface provide the reference to the lambda expression.
    - Comparator<String> c = (s1,s2) -> s1.compareTo(s2);
@@ -32,7 +34,7 @@
    method reference is alternative of lambda expression.
    
 8. Default Method : method is interface with implementaion this will not affect to the 
- interface which are implementing this.
+   interface which are implementing this.
 
 9 can we overrid the default method in java.
   Yes if we are not setisfying with default implementaion.
@@ -87,6 +89,11 @@
 	Stream main concept is creation  --> configuration --> Processing
 	we can achieve procession using following methods 
 	collect, count,forEach,sorted,toArray,of,min Max
+	
+	collect
+	of: convert any group of value into stream
+	
+	
 	
 3. Predicates
    -- predifined functional interface (having only one abstract method)
@@ -153,8 +160,26 @@
   
 10 there is no triPredicate, triFnction, triConsumer in java
 
-
+ 
 localDate .now
 localTIme .now 
 
+getZone 
+after before time plusMonth() and minusMonth()
+
 11 map return single value of object but flatMap return multiple values (Stream of object).
+
+12 Optional class is check for null
+   if we are using optional than will not get null pointer exception
+   
+   :Java introduced a new class Optional in Java 8. It is a public final class which is used to deal with NullPointerException in Java application. We must import java.util package to use this class. It provides methods to check the presence of value for particular variable.
+   
+   https://javaconceptoftheday.com/solving-real-time-queries-using-java-8-features-employee-management-system/
+   
+13 Method Reference : is replacement of lambda expression it is used to refer the method of functional Interface to an existing method.
+                     -- code resuability
+					 -- dubble collon operator ::
+					 -- whenever we have existing implementaion of abstarct method of functional interface than we can go for mehod reference
+					 
+14 Parallel Stream : it utilize to multiple core of CPU.
+  -- when we use parallel stream we divide the code into multiple streams that executes parallely , on seperate cores and final result is the outcome of individua

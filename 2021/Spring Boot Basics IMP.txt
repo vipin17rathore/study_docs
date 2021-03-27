@@ -11,27 +11,28 @@ SPRING BOOT
 4 @QueryParam
 5 ResponseEntity for response code 
 6 addHeaders 
-7. @ExceptionHandler and @Valid with exception handling ResponseEntityExceptionHandler
+7.@ExceptionHandler and @Valid with exception handling ResponseEntityExceptionHandler
 8 Hateoas ?? pending
-9  swagger defination http://localhost:8787/v2/api-docs
+9 Swagger defination http://localhost:8787/v2/api-docs
   swagger ui uurl : 
 
-10 SPRING CLOUD
+10 SPRING CLOUD ::
 	Netflix various component(euerka , zuul(8765 default port), hystrix ,  achalus )
 	Eureka- naming server (8761 default port)
-	ribbon : client side load balancing
-	hystrix : fault tolerance
-    service discovery
+	Ribbon : client side load balancing
+	Hystrix : fault tolerance
+    Service discovery
 
 Eureka Server ::
 
 link: https://www.youtube.com/watch?v=VfzLIOY646I&list=PLO0KWyajXMh4u-DhB7bXoRQ21rfkF_cSU&index=4
-Eureka Server is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server
+Eureka Server is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server.
 
 1) For eureke server need eureka server dependencey time of project creation
 2) @EnableEurekaServer in main class
 3) server port in properties file and start the service
 4) than we can access localhost://port
+5) @EnableEurekaServer
 
 Eureka client  
 
@@ -43,6 +44,7 @@ Eureka client
    eureka.client.serviceUrl.defaultZone=http://localhost:9595/eureka/
    spring.cloud.config.server.native.search-locations=file:///E:/Workspace_STS/config-files  (which will refer the all the configuration)
    in file directry will keep properties file to read all the configuration for client server
+   @enableeurekaclient
    
 4) than first we will start server than client
 5) now we can access eureka client in eureka server local running instance
@@ -52,6 +54,7 @@ Config server setup :: we can do this by two method first one is git or normal f
 1 config server setup :
    1 need to add spring cloud config dependency
    2 spring.profiles.active=native in properties file
+   @enableconfigserver
    
 2 config client setip:
   1 in properties file : spring.cloud.config.uri=http://localhost:8888 (url is config server url)

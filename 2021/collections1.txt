@@ -1,11 +1,15 @@
 ----collections---
+
+collections---
+Representing a group of object 
+
 1.How we can achieve the thread safety.
   using synchronization
   using volatile keyword
   using final keyword
   using atomic variable
   
-2. copyonWriteArrayList clss : synchronized list
+2. copyOnWriteArrayList clss : synchronized list
 
 3. how to remove duplicate element from list   
    using linkedhasset
@@ -14,7 +18,8 @@
 4.how to compare two arraylist first sort it using Collections class than use .equals method
 
 5.removeAll
-  retainAll
+  retainAll : intersection
+  addAll : union
 
 6.how to iterate the hashmap
   using iterator
@@ -48,4 +53,20 @@
 12 what will happen if multithread application will use the hasmap
    data mighht be currupted becase so many thread will try to update the value at same time
    
-13
+13 hashSet : internally hashtable
+   linkedHashSet : hashtable + linked list
+   
+14 queue : interface - priority queue class
+   deque : interface - linked list class
+   
+15 keySet return all the keys as a set and 
+   values returns all the values as a collections
+   entrySet() if u want all the entry as set
+   
+   
+   -- Balanced Binary Tree : 
+   -- Dual-Pivot Quicksort  : Collections use internally
+   
+   
+   To serialize an object means to convert its state to a byte stream so that the byte stream can be reverted back into a copy of the object. A Java object is serializable if its class or any of its superclasses implements either the java.io.Serializable interfac
+

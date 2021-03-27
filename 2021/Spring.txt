@@ -23,3 +23,49 @@ Spring
 ==> SQL and PLSQL
 ==> GIT
 ==> AWS
+--------------------
+1. Autowire by name, by type , by constructor
+2. @Required :
+   The @Required annotation in spring is a method-level annotation applied to the setter method of a bean property and thus making the setter-injection mandatory. This annotation indicates that the required bean property must be injected with a value at the configuration time.
+   
+3 @Value: to read the value from property file
+4 @Component is found during classpath scanning and registered in the context as a Spring bean. @Service
+5 @Configuration : for configuration class
+6 @ComponentScan : to scan the base packages
+7 @ Bean :@Component is a class level annotation whereas @Bean is a method level annotation and name of the method serves as the bean name. @Component need not to be used with the @Configuration annotation where as @Bean annotation has to be used within the class which is annotated with @Configuration
+
+
+
+Controller Advice
+The @ControllerAdvice is an annotation, to handle the exceptions globally.
+
+Exception Handler
+The @ExceptionHandler is an annotation used to handle the specific exceptions and sending the custom responses to the client.
+
+Cross Cutting : a common functionality which is require in entire application called cross cutting concern
+
+AOP annotation::
+@Aspect   : class level
+@EnableAspectJAutoProxy class level
+@Component
+
+method level
+@Before("execution(public void draw)")
+@After
+
+wildcard means (*)
+pointCut vs jointPoint 
+@PointCut :
+
+PointCut is a set of one or more JoinPoint where an advice should be executed. You can specify PointCuts using expressions or patterns as we will see in our AOP examples. In Spring, PointCut helps to use specific JoinPoints to apply the advice. Consider the following examples −
+
+@PointCut("execution(* com.tutorialspoint.*.*(..))")
+
+@PointCut("execution(* com.tutorialspoint.Student.getName(..))")
+
+@Jointpoint ::
+A JoinPoint represents a point in your application where you can plug-in AOP aspect. You can also say, it is the actual place in the application where an action will be taken using Spring AOP framework. Consider the following examples −
+
+All methods classes contained in a package(s).
+
+A particular methods of a class

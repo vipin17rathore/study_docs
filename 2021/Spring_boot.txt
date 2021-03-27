@@ -1,6 +1,6 @@
 1.Spring                                     Spring Boot
-  is framework	                              its module
-  Complex in terms of configuration           less complex
+  is framework	                             its module
+  Complex in terms of configuration          less complex
 
 2. Use of spring boot application
   - Stand alone spring boot application
@@ -68,7 +68,7 @@
 11. Spring dev tools is set of tools aims to make development easier. if application running in prod it automatically disabled.
 
 12. Where we mention the databse properties
-    : in application.properties
+   : in application.properties
      spring.datasource.username
 	 spring.datasource.password
 
@@ -96,7 +96,7 @@
 
 17. Diff btw @SpringBootApplication and @EnableAutoConfiguration
    - @SpringBootApplication is combination of @Configuration @ComponentScan and @EnableAutoConfiguration
-   - @EnableAutoConfiguration :: Enable auto-configuration of the Spring Application Context, attempting to guess and configure beans that you are likely to   need. Auto-configuration classes are usually applied based on your classpath and what beans you have defined. For example, if you have tomcat-embedded.
+   - @EnableAutoConfiguration :: Enable auto-configuration of the Spring Application Context, attempting to guess and configure beans that you are likely to need. Auto-configuration classes are usually applied based on your classpath and what beans you have defined. For example, if you have tomcat-embedded.
 18. how to deply spring boot application as jar or war.
   - 
   
@@ -106,19 +106,19 @@
 20. how will remove and override the tomact server
   - we will exclued the tomact server using tag <exclusion> in web dependency
   
-21. how to disable embeded web application or disable default webe server
+21. how to disable embeded web application or disable default web server
   - spring.main.web-application-type = none
   
 22. how to disable particular class for auto configuration.
 	- using @EnableAutoConfiguration(exclude={Test.class})
 	
-23. @RestController : convert the response into xml or json so api read that. beacause its combination of @controller and @ResponseBody annotation.
+23. @RestController : convert the response into xml or json so api read that. beacause its combination of @controller and @ResponseBody 	annotation.
 
 24. How to use profile in spring boot
     - in application.properties mention spring.profile.active = prod
 	and create different properties file name as application-prod.properties , application-dev.properties
 	
-25. Spring actuatot and its use
+25. Spring actuator and its use
     -means moving or controlling
 	-spring boot actuator provide additional feature that help you to monitor and manage application when you pushed into prod
      it includes additional feature like auditing , health it generate automatically.

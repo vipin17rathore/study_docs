@@ -5,14 +5,14 @@
 4. comparable and comparator
 5. thread state
 6. i have 3 thread how can decide do that thay will rull t1,t2,t3 sequence
-7. @qualifier
+7. @qualifier   : The @Qualifier annotation is used to resolve the autowiring conflict, when there are multiple beans of same type
 8. spring mvc flow
 9. microservice basic
-10. thread schedulor
-11. actuator
-12. serialization deserialization
-13. spring bean scope singlton prototype
-   :singleton
+10 thread schedulor
+11 actuator
+12 serialization deserialization
+13 spring bean scope singlton prototype
+   :singleton 
 	prototype
 	request
 	session
@@ -30,3 +30,38 @@ java.lang.Runtime.getRuntime(): This method gives Runtime class that has only on
   https://www.java67.com/2020/05/5-ways-to-implement-singleton-design.html
   
 19 diff btw encapsulationn and abstractionn
+
+---CG-------
+20 return the emp name list from employee object and sort the data based on sal >100 and retun the list of name;
+21 filter in spring
+22 response code and its status
+23 using comparator sort the data based on age comparator
+24 hashcode and equals logic is hashCode is equals than object will equal and wiseverse
+25 design pattern
+26 exceptiona and runtime exception
+27 try with resources
+28 how to process image and file using request mapping
+29 crossCutting functionalti
+30 ExceptionHandler
+31 acidId
+32 seraliaztiona and its ways
+33 inner class , varibale 
+34 constructor 
+35 can we rethrow sql exception exception
+36  program ::  aaabbaaccccb = a3b2a2c4b1
+
+String s = "hello vipin";
+
+37 what is flat map
+39 state of stream 
+40 stages of log4j
+41 diff btw war and err file
+42 how default method used in lambda
+43 what is runnable and collable
+44 diff btw heap and stack
+45 sort tha odd data using stream and add that
+46 design pattern
+47 default scope of spring bean : singlton
+48 what is map
+49 abstract clss
+ 
