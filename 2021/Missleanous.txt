@@ -1,0 +1,24 @@
+--------Missleanous----
+1. Intern: The java string intern() method returns the interned string. It returns the canonical representation of string. It can be used to return string from memory, if it is created by new keyword. It creates exact copy of heap string object in string constant pool.
+
+2.If two objects are equal, they MUST have the same hash code. 
+ If two objects have the same hash code, it doesn't mean that they are equal.
+ 
+3 The only difference is System.gc() is a class method where as Runtime.gc() is an instance method. So, System.gc() is more convenient.
+
+4 Runtime clss in singlton clss in java. 
+ex of singlton is logging . caching , security. 
+
+5 disadvantage of multithreading ::
+-- Complex debugging and testing processes
+-- Result is sometimes unpredictable
+-- Overhead switching of context
+-- Increased potential for deadlock occurrence
+-- Increased difficulty level in writing a program
+-- general: increased complexity
+-- synchronization of shared resources (objects, data)
+-- potential deadlocks
+-- "starvation": some threads may not be served with a bad design
+-- constructing and synchronizing threads is CPU/memory intensive
+
+6	

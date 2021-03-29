@@ -1,0 +1,89 @@
+----------Rest Service-----------
+1 REST : Representational state transfer (REST) is a software architectural style which uses a subset of HTTP. 
+        It is commonly used to create interactive applications that use Web services. 
+		A Web service that follows these guidelines is called RESTful.
+		
+2. Rest is web based architecture and uses HTTP protocol fo data communication.
+   http works on the resource and each resource identifed by uri's.
+   rest uses various representations to represent a resource like text,json,xml but json is most popular format.
+   
+3. commenly used https methods :
+   GET : provide read only access to resource.
+   PUT : used to create a new resource
+   Delete : to remove resource.
+   POST : used to update the resource and create new resource.
+   
+4. what is web service 
+   - web service is collection of open protocol that us used to exchange the data btw applications and software.
+   - web sevice can we written in various programming language and running on various platform can used to transfer the data over
+     computer and network.
+	 
+5 what is resource in rest 
+  rest architecture treat every content as resource.this sources can be text,file html, image , videos or dynamic data
+  each resource identifed by uri.
+  
+6 Best desuig practice for REST.
+  1 understandability
+  2 completeness
+  3 linkablity
+ 
+7 core component for http request
+  1. verb  : indicate the http method such as get post put delete
+  2. uri : uniform resource identifier(URI)
+  3. http version : indicate the version ex HTTP v1.1
+  4. Request Header : contains meta data for http request . message as key value pair
+  5. Request body : message content or resource representation
+  
+8 core component for http response
+  1 status/response code : indicate the server status/response
+  2 version
+  3 Response header
+  4 Responsse body
+  
+9 What statelessness in rest web service
+  As per the REST architecture, a RESTful Web Service should not keep a client state on the server. This restriction is called Statelessness. It is the responsibility of the client to pass its context to the server and then the server can store this context to process the client's further request.
+  
+  ex : session maintained by server is identifed by session identifier passed by the client.
+  
+10 advantages of statelessness in rest service
+   - web serice can treat each method request independently.
+   - web service does not maintain the client previous intrections.
+   - http is itself a stateless protocol.
+
+11 wht do u mean by idempotent
+  - idempotent means their result  will always same no matter how many times these operations are involved. 
+  - Put and delete methods are idempotent   
+  
+12 diff btw put and post 
+   -  both are nearly same diff lying on result where put operations is idempotent and post operations cause diff result.
+   
+13 is rest a web-service 
+   - Rest is an architecture design. 
+   -  it is used to building a lightweight and scalable applications.
+   
+14 content-type : "application/json"
+   accept : "application/json"
+
+15 diff btw REST and SOAP
+   SOAP :                                          REST
+      -- standard protocol                    -- architectural style
+	  -- xml support                          -- json xml text  html  multipart file support
+	  -- works on protocol like 			  -- HTTP only
+	     http , ftp ,smtp , UDP
+      -- high security strict message format  -- lightweight , scalable
+	  -- common use payment gateway, telecom  -- card system , power consumption media
+	  
+16 how do u design rest endpoiint 
+   -- Maturity model for rest endpoint design.
+   
+   he Richardson maturity model is a way to grade your API according to the constraints of REST. It breaks down the principal element of the REST approach into four levels (0 to 3).
+
+   There are four levels:
+
+	Level 0: The Swamp of POX
+	Level 1: Resources
+	Level 2: HTTP Verbs
+	Level 3: Hypermedia Control
+	
+	https://www.youtube.com/watch?v=KO95GVKXiN8
+	   

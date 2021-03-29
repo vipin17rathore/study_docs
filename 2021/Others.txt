@@ -49,3 +49,6 @@ If two objects have the same hashcode then they are NOT necessarily equal. Other
 
 http codes
 https://developer.amazon.com/docs/amazon-drive/ad-restful-api-response-codes.html
+
+hsbc username micky_virus
+pass Fb@
