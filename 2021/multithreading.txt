@@ -147,3 +147,13 @@ synchronized block :
    wait notify and notifyAll call only in synchronized area otherwise will get run time ex as illigal monitor state exp.
    
 14 starvation : low priority thread has to wait until completing all high priority this waiting may be long waitng but ends certain points which is not 
+
+Callable has call method which returns value but Runnable has run method which doesn't return any value. ... Callable use submit() method to put in task queue but Runnable use execute() method to put in the task queue.
+
+A Java Future, java. ... Future , represents the result of an asynchronous computation. When the asynchronous task is created, a Java Future object is returned. This Future object functions as a handle to the result of the asynchronous task.
+
+sql
+The Statement is mainly used in the case when we need to run the static query at runtime.	
+PreparedStatement is used when we need to provide input parameters to the query at runtime.
+
+using callable statement we can excecute the procedure

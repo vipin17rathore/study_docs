@@ -22,7 +22,7 @@
   rest architecture treat every content as resource.this sources can be text,file html, image , videos or dynamic data
   each resource identifed by uri.
   
-6 Best desuig practice for REST.
+6 Best design practice for REST.
   1 understandability
   2 completeness
   3 linkablity
@@ -65,9 +65,9 @@
    accept : "application/json"
 
 15 diff btw REST and SOAP
-   SOAP :                                          REST
+           SOAP :                                      REST
       -- standard protocol                    -- architectural style
-	  -- xml support                          -- json xml text  html  multipart file support
+	  -- xml support                          -- json xml ,text,  html  multipart file support
 	  -- works on protocol like 			  -- HTTP only
 	     http , ftp ,smtp , UDP
       -- high security strict message format  -- lightweight , scalable
@@ -87,3 +87,17 @@
 	
 	https://www.youtube.com/watch?v=KO95GVKXiN8
 	   
+	   
+17 200 OK
+   201 Created
+   202 Accepted
+   
+   400 Bad Request
+   401 Unauthorized
+   404 Not Found
+   408 Request Timeout
+   
+   500 Internal Server Error
+   502 Bad Gateway
+   503 Service Unavailable
+   

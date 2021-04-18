@@ -21,4 +21,10 @@ ex of singlton is logging . caching , security.
 -- "starvation": some threads may not be served with a bad design
 -- constructing and synchronizing threads is CPU/memory intensive
 
-6	
+6 What is the difference between Serializable and Externalizable interface in Java?
+This is most frequently asked question in Java serialization interview. Here is my version Externalizable provides us writeExternal() and readExternal() method which gives us flexibility to control java serialization mechanism instead of relying on Java's default serialization. Correct implementation of Externalizable interface can improve performance of application drastically.
+
+Read more: https://javarevisited.blogspot.com/2011/04/top-10-java-serialization-interview.html#ixzz6qZSWkDwg
+
+7 This is very common interview question in Serialization basically interviewer is trying to know; Whether you are familiar with usage of readObject(), writeObject(), readExternal() and writeExternal()
+

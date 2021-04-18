@@ -52,3 +52,15 @@ https://developer.amazon.com/docs/amazon-drive/ad-restful-api-response-codes.htm
 
 hsbc username micky_virus
 pass Fb@
+
+--
+
+<% code fragment %> Scriplet
+<%! declaration; [ Declaration; ]+ ... %>
+<%= expression %>  Expression
+
+int 
+service
+destroy
+
+httpServlet

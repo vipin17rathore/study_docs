@@ -6,7 +6,7 @@ Spring
   This annotation is used on a class that needs to be taken by spring on a primary basis. For instance, if ClassX is @Component annotated and is dependent on both Class1 and Class2 (both @Component annotated) then the compiler would report an error. To show the primary class between Class1 and Class2 we use @Primary.
   
 4. Dependency Injection
-5 IOC
+5  IOC
 6. @Component can be used in any of the layers. Whereas, the @Controller is used in the controller/web layer. @Service is used in the business layer and @Repository is used in the DAO layer.
 @RequestParam = > is for parameter which is avalibale in url
 
@@ -69,3 +69,31 @@ A JoinPoint represents a point in your application where you can plug-in AOP asp
 All methods classes contained in a package(s).
 
 A particular methods of a class
+
+scope: 
+Prototype : to force spring to produce a new bean instance each time needed than the scope wil be prototype
+singleton : if you want sping to return the same bean instance each time needed than the scope will be singleton
+            -- singlton instance stored in cache of such singlton beans. default scope is singlton 
+			
+singleton – Return a single bean instance per Spring IoC container
+prototype – Return a new bean instance each time when requested
+request – Return a single bean instance per HTTP request. *
+session – Return a single bean instance per HTTP session. *
+globalSession – Return a single bean instance per global HTTP session. *
+
+
+--------------
+1. Types of IOC 
+
+BeanFactory: BeanFactory is like a factory class that contains a collection of beans. It instantiates the bean whenever asked for by clients.
+
+ApplicationContext: The ApplicationContext interface is built on top of the BeanFactory interface.
+					It adds some extra functionality than BeanFactory such as simple integration with Spring's AOP, message resource handling , event propagation
+					
+2. What are the transaction management supports provided by spring?
+Spring framework provides two type of transaction management supports:
+
+Programmatic Transaction Management: should be used for few transaction operations.
+Declarative Transaction Management: should be used for many transaction operations.
+
+					

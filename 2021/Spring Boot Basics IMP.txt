@@ -240,7 +240,7 @@ http://localhost:9000/about
 5. Cloud Ribbon
 6. Feign Client 
 7. Slueuth & Zipkin
-8. Zull Routing
+8. Zull Routing called as api gateway
 9. Consul 
 10 Hystrix Circuit breaker
 
@@ -251,3 +251,5 @@ need to create account in okat and require to configure the auth and okta depend
 
 	
 Microserview :Microserview is architecture is to design small loosely coupled application with individually package,individually deployed and individually process.
+
+using Rest Template we can one microservice from other.

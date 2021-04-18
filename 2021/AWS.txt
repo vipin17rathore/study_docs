@@ -1,0 +1,82 @@
+-----------AWS----------
+
+1. aws s3 command : aws s3 ls
+                    aws s3 rm
+					aws s3 cp
+					aws s3 mv
+					
+2. how can protect data in s3 : using AES 256 encryption and AWS-KMS
+
+3 explain ELB : elastic load balancer
+
+4 EBS vs EFS vs s3
+  EBS :Amazon EBS (Elastic Block Store) is a virtual disk for your virtual machine, like your C: and D: drive
+  
+  
+5  EC2 (Elastic Compute Cloud)
+   types of ec2
+   R - memory optimized
+   I - storage optimized
+   C - compute optimized
+   M - medium :  balance btw memory and storage
+   
+6 RDS : aurora
+		RDS : Amazon Relational Database Service is a distributed relational database service by Amazon Web Services
+		Amazon RDS supports an array of database engines to store and organize data and helps with database management tasks, such as migration, backup, recovery and patching.
+		
+		in rds automatic backup provided by aws
+		
+7 benefits of AWS
+  Easy to use
+  Flexibility
+  Realiablity
+  Sacliablity -- main
+  cost effective
+  Security
+  
+8 AWS Service:
+  compute
+  storage
+  database
+  migration
+  networking
+  developer tools
+  ML
+  mobile services
+  modia services
+  
+  
+9 Compute : it helps developers to build scale amd depoly the application to the cloud
+           following service comes in compute category
+		   1 ec2 2 lambda 3 elb 4 elastic beanstalk
+		   
+		   AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, . NET, PHP, Node. js, Python, Ruby
+		   
+10 Storage service : used for data storage
+    s3 bucket
+	EBS : elastic block storage :mainly used by amazon ec2 instance
+	Glacier :
+
+11 databse servcie :
+   RDS
+   dynamo db : non relational
+   elastic cache
+   amazon redshift
+   
+12 networking : 
+   VPC :  provide private ans secure cloud : You can use both IPv4 and IPv6 for most resources in your virtual private cloud, helping to     ensure secure and easy access to resources and applications. that is control by admin.
+   Route 53 : it used for (  DNS domain name system ) . it translate text into ip address.
+   Cloud front :
+   direct connect :
+   
+   
+13 security: IAM : access control
+             KMS : used for securitt
+			 
+14 cloud watch is used for monotoring for ec3, s3, and rds serrvices
+
+15 key pair is required for ec2 virtual server creationa and authantication
+    
+16 AWS Lambda is a serverless compute service that runs your code in response to events and automatically manages the underlying compute resources for you. You can use AWS Lambda to extend other AWS services with custom logic, or create your own back-end services that operate at AWS scale, performance, and security.
+  
+17 MFA – Multifactor factor authentication

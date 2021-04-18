@@ -64,4 +64,5 @@ String s = "hello vipin";
 47 default scope of spring bean : singlton
 48 what is map
 49 abstract clss
+50 yes, The constructor implicitly returns the current instance of the class 
  
