@@ -10,20 +10,6 @@ Spring
 6. @Component can be used in any of the layers. Whereas, the @Controller is used in the controller/web layer. @Service is used in the business layer and @Repository is used in the DAO layer.
 @RequestParam = > is for parameter which is avalibale in url
 
-==> Spring MVC Navin Tutorial
-==> Sprinng boot Navin Video
-==> Spring boot deployment using jar and war
-==> Spring Interview Questions
-==> Microservices
-==> Basic Hibernate
-
-==> Basic JSP
-==> Bacis Servlet
-==> Basic HTML , CSS for like interview questions
-==> SQL and PLSQL
-==> GIT
-==> AWS
---------------------
 1. Autowire by name, by type , by constructor
 2. @Required :
    The @Required annotation in spring is a method-level annotation applied to the setter method of a bean property and thus making the setter-injection mandatory. This annotation indicates that the required bean property must be injected with a value at the configuration time.

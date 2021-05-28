@@ -101,7 +101,7 @@
   - 
   
 19. Best way to expose custom application configuration with sppring boot
-   using @Value annotation
+   using @Value{} annotation
    
 20. how will remove and override the tomact server
   - we will exclued the tomact server using tag <exclusion> in web dependency

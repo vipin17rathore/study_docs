@@ -7,8 +7,25 @@ SPRING BOOT
   PUT
   
 2 @PathVariable
-3 @RequestBody
-4 @QueryParam
+@PathVariables extract values from the URI path:
+
+@GetMapping("/foos/{id}")
+@ResponseBody
+public String getFooById(@PathVariable String id) {
+    return "ID: " + id;
+}
+
+3. RequestParam  param
+@GetMapping("/foos")
+@ResponseBody
+public String getFooByIdUsingQueryParam(@RequestParam String id) {
+    return "ID: " + id;
+}
+
+http://localhost:8080/foos?id=abc
+----
+ID: abc
+
 5 ResponseEntity for response code 
 6 addHeaders 
 7.@ExceptionHandler and @Valid with exception handling ResponseEntityExceptionHandler

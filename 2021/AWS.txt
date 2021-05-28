@@ -73,7 +73,7 @@
 13 security: IAM : access control
              KMS : used for securitt
 			 
-14 cloud watch is used for monotoring for ec3, s3, and rds serrvices
+14 cloud watch is used for monotoring for ec2, s3, and rds services
 
 15 key pair is required for ec2 virtual server creationa and authantication
     

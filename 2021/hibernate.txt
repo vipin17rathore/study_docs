@@ -13,8 +13,7 @@
   -- it throws Jdbc and HibernateException which are the unchecked exception so we don't need to worry aboout the handling with try and catch.
   
 4. important interface used in hibernate
-   1 SessionFactory : it used to retrive the session object from database and cache it so reuse again and again. sessionFactory object par database connection
-						like mysql and oracle
+   1 SessionFactory : it used to retrive the session object from database and cache it so reuse again and again. sessionFactory object par database connection . like mysql and oracle
    2 Session :it used to get a physical conn with database. it provide the methods for CRUD operation.
    
    3 Transaction : specify single unit of work
@@ -60,6 +59,19 @@
 					
   3 query cache : The query cache is responsible for caching the results of queries
                  configuration: use_query_cache==true
+				 
+				 
+ JPA Methods
+ 
+save::::: Pass an Entity Bean or a subclass to Entity Bean and it will be persisted. The persisted entity will be returned. Any auto-generated  field or default fields will be initialised and returned with the entity.
+saveAll:::: Pass an iterable of the Entities and will be saved.
+findById: Pass the ID field and the matching entity will be returned. It returns an Entity wrapped in an Optional object.
+existsById::: Checks if the given ID exists into the table and returns boolean.
+findAll: This method returns all the entities from table.
+findAllById::: Returns iterable of all the entities that match the given ID.
+count::: The count of entities.
+deleteById::: Find an entity by given ID and delete.
+delete::: Find an entity matching to the given entity and delete.
 				 
 
   
