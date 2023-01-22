@@ -1,0 +1,46 @@
+1.) Spring boot security using JWT
+		Dependencies are:
+		  <artifactId>spring-boot-starter-security</artifactId>
+							AND
+		  <artifactId>jjwt</artifactId>  //jsonwebtoken
+		  
+		1 Need to create configuration class with @configuration annotation and @EnableWebSecurity.
+		  configuation class used for authentication and used for apply the filter to track all the request that should authenticate
+		  
+		2 one more class required that is used for to get the user details from db or ldap and return the object of UserDetails
+
+		3. tokenUtil class provide all the token related method like generate token, validateToken isTokenExpired and more
+
+		4. first user has to call the generatetoken api and need to pass username and pass in header so endpoint can validate the user authenticity
+		   localhost:8080/token
+			
+		5. once get the token we can call the appropicate endpoint.
+		   need to pass the token in api header
+		   for the token authentication we need to implement the authenticationFilter which authenticate the user.
+		   
+		6. if token expired we have to call the refreshToken with old tokena and isRefreshToken key in header.
+		   if validated then get the token in response.
+		   
+		   localhost:8080/refreshtoken
+		   
+		 useful url for jwt spring security
+		 https://www.javainuse.com/spring/boot-jwt
+		 https://www.youtube.com/watch?v=MU2e6-CC3Pc
+
+
+2.) produces = {"application/json"} used for reponse format we can used with @RequestMapping annotation.
+	consumes = {"application/json"} used for request format we can used with @RequestMapping annotation.
+	
+	@pathVaribale @RequestParam
+	@PatchMapping is used when we want to apply the partial update to the resource and does not want to update the entire resource.
+	@ResponseEntity : ResponseEntity represents the whole HTTP response: status code, headers, and body. As a result, 
+					  we can use it to fully configure the HTTP response.
+					  
+	to call the post api using restTemplate
+	ResponseEntity<String> userResponseEntity = restTemplate.postForEntity(URL, request, String.class);
+	: postForObject
+	: put
+	: patchForObject
+	: delete
+	: getForObject
+	: getForEntity
